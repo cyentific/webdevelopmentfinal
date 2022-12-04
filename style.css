@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Days+One&family=Josefin+Sans:wght@600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;;
+}
+html {
+  scroll-behavior: smooth;
+
+}
+
+a, a:visited {
+  color: white;
+  text-deocarion: none; /* Removes underline */
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+
+.section {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+
+}
+
+.navigation {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 40px;
+  display: inline-flex;
+  align-self: flex-end;
+  padding: 8px;
+  border: 2px;
+  margin: 1px;
+}
+
+.navButton {
+  display: inline-flex;
+  background-color: #92e097;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  position: relative
+  width: 100%;
+  height: 10vh;
+  overflow: auto;
+}
+
+.container .section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 350px;
+  height: 380px;
+  background: #fff;
+  padding: 10px;
+  margin: 100px auto;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 80px;
+  border-top-left-radius: 80px;
+  border: 1px solid rgb(139, 83, 73)
+
+}
+
+form {
+  width: 260px;
+  margin: 20px 37px;
+  text-align: center;
+}
+
+#contactus {
+  text-transform: uppercase:
+  margin-bottom:10px;
+}
+
+input, textarea {
+  widht: 100%:
+  padding: 7px;
+  border: none;
+  outline: none;
+  display: block;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: 1px solid; /* put desired color rgb*/
+}
+
+button {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding:10px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 7px; /* put desired color rgb*/
+  background:
+}
+
+button:hover {
+  background: /* put desired color rgb*/
+
+}
