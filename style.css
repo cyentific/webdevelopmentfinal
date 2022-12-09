@@ -12,7 +12,9 @@ html {
 
 a, a:visited {
   color: white;
-  text-deocarion: none; /* Removes underline */
+  /* Has small typo */
+  /* text-deocarion: none; */ /* Removes underline */
+  text-decoration: none;
 }
 
 body {
@@ -22,33 +24,86 @@ body {
 
 .section {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 50px;
+  font-size: 40px;
+
+  /* We need to make room for the navigation when jumping to these sections: */
+  padding-top: 150px;
+  padding-bottom: 90px;
 
 }
+
+body {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(96,187,102,1) 100%);
+}
+
+/* #aboutUsSection {
+  background-color: rgba(255,0,255, 0.1);
+}
+#prosConsSection {
+  background-color: rgba(0,0,255, 0.1);
+}
+#resourceSection {
+  background-color: rgba(255,0,0, 0.1);
+}
+#contactSection {
+  background-color: rgba(0,255,0, 0.1);
+} */
 
 .navigation {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 40px;
-  display: inline-flex;
-  align-self: flex-end;
-  padding: 8px;
+  font-size: 50px;
+  text-shadow: 2px 2px #46844a;
+  /* display: inline-flex; */
+  display: flex;
+  width: 100%;
+  /* align-self: flex-end; */
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
   border: 2px;
-  margin: 1px;
+  /* margin: 1px; */
+  /* We want to fix it in position so it stays in place: */
+  position: fixed;
+  top: 0px;
+  /* And we want it to always be on top of everything: */
+  z-index: +99;
 }
 
-.navButton {
+.navLink {
   display: inline-flex;
   background-color: #92e097;
   padding: 4px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 8px;
+
+  /* border-radius: 5px; */
 }
+
+.navigation img {
+  height: 100px;
+  margin-right: 10px;
+}
+
+#nav01 {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#nav04 {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.navLink:hover {
+  background-color: #52cf5a
+}
+
 
 .container {
   position: relative
   width: 100%;
-  height: 10vh;
-  overflow: auto;
+  /* height: 10vh; */
+  /* overflow: auto; */
+  padding-bottom: 80px;
 }
 
 .container .section {
@@ -57,21 +112,167 @@ body {
   height: 100%;
 }
 
+#aboutUs {
+  position: relative;
+  left: 20px;
+}
+
+#aboutUs h1 {
+  position: absolute;
+  top: 29px;
+  left: 52px;
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px #46844a;
+}
+
+#pvcGraphic{
+  position: relative;
+  left: 20px;
+}
+
+#pvcGraphic h1 {
+  position: absolute;
+  align-items: center;
+  top: 30px;
+  left: 32px;
+  font-size: 41px;
+  color: white;
+  text-shadow: 2px 2px #46844a;
+}
+
+#resourceGraphic{
+  position: relative;
+  right: 80px;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+#resourceGraphic h1{
+  position: absolute;
+  top: 30px;
+  left: 32px;
+  font-size: 55px;
+  color: white;
+  text-shadow: 2px 2px #46844a;
+
+}
+
+#contactGraphic{
+  position: relative;
+  left: 20px;
+
+}
+
+#contactGraphic h1{
+  position: absolute;
+  align-items: center;
+  top: 28px;
+  left: 49px;
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px #46844a;
+
+}
+
+.columnContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+#missiongrid{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+
+}
+
+#mhcLogo{
+  padding-left:160px;
+  padding-top: 100px;
+}
+.headered {
+  padding-left: 80px;
+  padding-bottom: 30px;
+  font-size: 60px;
+  padding-top: 30px;
+  color: #254527;
+  text-shadow: 2px 2px #46844a;
+
+
+}
+
+#resourceSection {
+  display: flex;
+  justify-content: center;
+}
+
+#resourceSection .content {
+  display: inline-block;
+}
+
+#resourceBrowser {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 100px auto;
+  grid-column-gap: 60px;
+  width: 80vw;
+  min-width: 450px;
+  height: 50vh;
+  min-height: 450px;
+  padding-top: 30px;
+  font-size: 60px;
+}
+
+#resourceLinks {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#resourceLinks a, #resourceLinks a:visited {
+  color: #46844a;
+
+}
+
+#resourceWindow {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.linkGap{
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-shadow: 2px 2px white;
+  text-align: center;
+
+}
+
 .wrapper {
-  width: 350px;
-  height: 380px;
+  /* width: 350px; */
+  width: 450px;
+  /* Remove the fixed height to allow this box to scale to the size of your form */
+  /* height: 380px; */
   background: #fff;
   padding: 10px;
-  margin: 100px auto;
+  /* Fixing extra vertical space */
+  /* margin: 100px auto; */
+  margin: 0px auto;
   box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.1);
   border-bottom-right-radius: 80px;
   border-top-left-radius: 80px;
-  border: 1px solid rgb(139, 83, 73)
+  border: 1px solid #92e097 ;
+
 
 }
 
 form {
-  width: 260px;
+  /* width: 260px; */
   margin: 20px 37px;
   text-align: center;
 }
@@ -79,17 +280,26 @@ form {
 #contactus {
   text-transform: uppercase:
   margin-bottom:10px;
+  color: #52cf5a;
+  font-size: 65px;
+  text-shadow: 2px 2px #46844a;
 }
 
 input, textarea {
-  widht: 100%:
+  /* widht: 100%: */
+  width: 100%;
   padding: 7px;
   border: none;
   outline: none;
   display: block;
   border-radius: 4px;
   margin-bottom: 10px;
-  border: 1px solid; /* put desired color rgb*/
+  border: 1px solid #52cf5a; /* put desired color rgb*/
+}
+
+textarea {
+  height: 40vh;
+  min-height: 300px;
 }
 
 button {
@@ -100,11 +310,57 @@ button {
   color: #fff;
   cursor: pointer;
   margin-top: 10px;
-  border-radius: 7px; /* put desired color rgb*/
-  background:
+  border-radius: 7px;
+  background: #52cf5a;
 }
 
 button:hover {
-  background: /* put desired color rgb*/
+  background: #92e097;
 
+}
+
+#pvcSection {
+  font-size: 30px;
+  color: #336636;
+
+}
+
+#mission {
+  text-align: center;
+  color: #336636;
+  text-shadow: 2px 2px #46844a;
+}
+
+#missionz {
+  position: relative;
+  left:120px;
+
+
+}
+
+#missionz h2{
+  position: absolute;
+  align-items: center;
+  top: 70px;
+  left: 65px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px #46844a;
+
+}
+
+h2 {
+  width: 50%;
+}
+
+.pro {
+  text-shadow: 2px 2px white;
+}
+
+.con {
+  text-shadow: 2px 2px black;
+}
+
+.texted {
+  padding-top: 15px;
 }
